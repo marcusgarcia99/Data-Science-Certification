@@ -86,7 +86,7 @@ def get_pie_chart(entered_site):
             , [Input(component_id='site-dropdown', component_property='value')
             , Input(component_id="payload-slider", component_property="value")])
 
-def get_scat_plot(entered_site, payload_value):
+def get_scat_plot(entered_site, slider_range):
     low, high = slider_range
     mask = (spacex_df['Payload Mass (kg)'] > low) & (spacex_df['Payload Mass (kg)'] < high)
     df = spacex_df[mask]
